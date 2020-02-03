@@ -1,0 +1,10 @@
+{
+	"auth": {
+		"barona226ed05": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false
+		}
+	}
+}

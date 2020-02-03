@@ -1,0 +1,20 @@
+{
+    "krasz": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-baron-krasz-91936-authRole",
+            "UnauthRoleArn": "arn:aws:iam::556347854058:role/amplify-baron-krasz-91936-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::556347854058:role/amplify-baron-krasz-91936-authRole",
+            "Region": "eu-west-2",
+            "DeploymentBucketName": "amplify-baron-krasz-91936-deployment",
+            "UnauthRoleName": "amplify-baron-krasz-91936-unauthRole",
+            "StackName": "amplify-baron-krasz-91936",
+            "StackId": "arn:aws:cloudformation:eu-west-2:556347854058:stack/amplify-baron-krasz-91936/8ac98ad0-4655-11ea-b99c-0622cd7b28da",
+            "AmplifyAppId": "d1mbnfw5jvwtu1"
+        },
+        "categories": {
+            "auth": {
+                "barona226ed05": {}
+            }
+        }
+    }
+}
