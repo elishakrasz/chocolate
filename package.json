@@ -7,7 +7,7 @@
     "aws-amplify-react": "^2.0.2",
     "bootstrap-4-react": "0.0.54",
     "faker": "^4.1.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.13",
     "node-sass": "^4.13.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
