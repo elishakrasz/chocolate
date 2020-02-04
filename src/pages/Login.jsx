@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { Lead, BSpan } from 'bootstrap-4-react';
 import { Authenticator } from 'aws-amplify-react';
 
 import {
