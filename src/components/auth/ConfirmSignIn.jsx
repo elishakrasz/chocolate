@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
 import { Auth, Logger, JS } from 'aws-amplify';
 
-const logger = new Logger('JConfirmSignIn');
+const logger = new Logger('ConfirmSignIn');
 
-export default class JConfirmSignIn extends Component {
+export default class ConfirmSignIn extends Component {
   constructor(props) {
     super(props);
     this.confirmSignIn = this.confirmSignIn.bind(this);
@@ -90,7 +90,10 @@ export default class JConfirmSignIn extends Component {
             type='password'
           />
 
-          <Button color='teal' fluid size='large'  onClick={this.confirmSignIn}>
+          <Button style={{
+            backgroundColor: 'rgb(0, 61, 121)',
+            color: 'white'
+          }} fluid size='large'  onClick={this.confirmSignIn}>
             Confirm Sign In
           </Button>
         </Segment>

@@ -4,7 +4,7 @@ import { Auth, Logger } from 'aws-amplify';
 
 const logger = new Logger('ConfirmSignUp');
 
-export default class JConfirmSignUp extends Component {
+export default class ConfirmSignUp extends Component {
   constructor(props) {
     super(props);
     this.confirmSignUp = this.confirmSignUp.bind(this);

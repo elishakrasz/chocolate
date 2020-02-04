@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
 import { Auth, Logger } from 'aws-amplify';
+import logo from '../icons/dlogo2.png'
 
 const logger = new Logger('ForgotPassword');
 
-export default class JForgotPassword extends Component {
+export default class ForgotPassword extends Component {
   constructor(props) {
     super(props);
     this.sendCode = this.sendCode.bind(this);
@@ -47,9 +48,14 @@ export default class JForgotPassword extends Component {
     return (
         <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
     <Grid.Column style={{ maxWidth: 450 }}>
-      <Header as='h2' color='teal' textAlign='center'>
-        <Image src='/logo.png' /> Log-in to your account
-      </Header>
+    <Header as='h1' textAlign='center' style={{
+              color: '#003D79',
+              marginTop: '15px'
+          }}>
+            <Image style={{
+                marginBottom: '10px'
+            }} src={logo} /> Forgot Password
+          </Header>
       <Form size='large'>
         <Segment stacked>
           <Form.Input 
@@ -68,7 +74,10 @@ export default class JForgotPassword extends Component {
           />
 
           <Button 
-          color='teal' 
+         style={{
+          backgroundColor: 'rgb(0, 61, 121)',
+          color: 'white'
+        }} 
           fluid size='large'
           onClick={this.sendCode}>
             Send Password Reset Code

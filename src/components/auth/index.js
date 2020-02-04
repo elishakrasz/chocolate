@@ -1,14 +1,7 @@
-export { default as JSignOut } from './JSignOut';
 export { default as SignOut } from './SignOut';
-export { default as JSignIn } from './JSignIn';
 export { default as SignIn } from './SignIn';
-export { default as JConfirmSignIn } from './JConfirmSignIn';
 export { default as ConfirmSignIn } from './ConfirmSignIn';
-export { default as JSignUp } from './JSignUp';
 export { default as SignUp } from './SignUp';
-export { default as JConfirmSignUp } from './JConfirmSignUp';
 export { default as ConfirmSignUp } from './ConfirmSignUp';
-export { default as JForgotPassword } from './JForgotPassword';
 export { default as ForgotPassword } from './ForgotPassword';
-export { default as JForgotPasswordReset } from './JForgotPasswordReset';
 export { default as ForgotPasswordReset } from './ForgotPasswordReset';

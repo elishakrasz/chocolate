@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
 import { Auth, Logger } from 'aws-amplify';
+import logo from '../icons/dlogo2.png'
 
 const logger = new Logger('SignUp');
 
-export default class JSignUp extends Component {
+export default class SignUp extends Component {
   constructor(props) {
     super(props);
     this.signUp = this.signUp.bind(this);
@@ -54,9 +55,15 @@ export default class JSignUp extends Component {
     return (
         <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
     <Grid.Column style={{ maxWidth: 450 }}>
-      <Header as='h2' color='teal' textAlign='center'>
-        <Image src='/logo.png' /> Sign Up
-      </Header>
+    <Header as='h1' textAlign='center' style={{
+              color: '#003D79',
+              marginTop: '15px'
+          }}>
+            <Image style={{
+                marginBottom: '10px'
+            }} src={logo} /> 
+            Sign Up For an Account
+      </Header> 
       <Form size='large'>
         <Segment stacked>
           <Form.Input 
@@ -85,8 +92,10 @@ export default class JSignUp extends Component {
           placeholder='Phone Number'
           onChange={event => this.inputs.phone_number = event.target.value}
           />
-          <Button 
-            color='teal' 
+          <Button style={{
+            backgroundColor: 'rgb(0, 61, 121)',
+            color: 'white'
+          }}
             fluid size='large'
             onClick={this.signUp}
             >
@@ -100,61 +109,6 @@ export default class JSignUp extends Component {
       { error && <Message>{error}</Message> }
     </Grid.Column>
   </Grid>
-    //   <BDiv display="flex" flex="column" alignItems="center">
-    //     <Form style={style} preventDefault>
-    //       <Form.Input
-    //         type="text"
-    //         placeholder="Username"
-    //         rounded="top"
-    //         border="bottom-0"
-    //         style={style.input}
-    //         onChange={event => this.inputs.username = event.target.value}
-    //         autoFocus
-    //       />
-    //       <Form.Input
-    //         type="password"
-    //         placeholder="Password"
-    //         border="bottom-0"
-    //         onChange={event => this.inputs.password = event.target.value}
-    //         style={style.input}
-    //       />
-    //       <Form.Input
-    //         type="email"
-    //         placeholder="Email address"
-    //         border="bottom-0"
-    //         style={style.input}
-    //         onChange={event => this.inputs.email = event.target.value}
-    //       />
-    //       <Form.Input
-    //         type="tel"
-    //         placeholder="Phone number"
-    //         rounded="bottom"
-    //         style={style.input}
-    //         onChange={event => this.inputs.phone_number = event.target.value}
-    //       />
-    //       <Row my="2" style={style.links}>
-    //         <Col text="left">
-    //           <BA href="#" preventDefault onClick={() => this.changeState('signIn')}>
-    //             Back to sign in
-    //           </BA>
-    //         </Col>
-    //         <Col text="right">
-    //           <BA href="#" preventDefault onClick={() => this.changeState('confirmSignUp')}>
-    //             Confirm a code
-    //           </BA>
-    //         </Col>
-    //       </Row>
-    //       <Button
-    //         primary
-    //         mt="3"
-    //         style={style.button}
-    //         onClick={this.signUp}
-    //       >
-    //         Create account
-    //       </Button>
-    //       { error && <Alert warning mt="3" text="left" style={style.alert}>{error}</Alert> }
-    //     </Form>
-    //   </BDiv>
     )
   }
 }

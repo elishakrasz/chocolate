@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import { Container } from 'bootstrap-4-react';
+// import { Container } from 'bootstrap-4-react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import { Logger } from 'aws-amplify';
 
 import store from '../store';
 import { Home, Profile, Login } from '../pages';
+import LeftMenu from './LeftMenu/LeftMenu';
+import MainContainer from './MainContainer/MainContainer';
 
 const logger = new Logger('Main');
 
@@ -33,12 +35,21 @@ export default class Main extends Component {
   render() {
     const { user } = this.state;
 
+    if (!user) { return <Login /> }
     return (
-      <Container as="main" role="main">
-        <div className="starter-template">
+        <div>
           <HashRouter>
             <Switch>
-              <Route
+            {/* <Route
+                exact
+                path="/login"
+                render={(props) => <Login user={user} />}
+              /> */}
+              <LeftMenu />
+              <MainContainer>
+              <Route component={({ match }) =>
+              <div>
+                     <Route
                 exact
                 path="/"
                 render={(props) => <Home user={user} />}
@@ -48,15 +59,12 @@ export default class Main extends Component {
                 path="/profile"
                 render={(props) => <Profile user={user} />}
               />
-              <Route
-                exact
-                path="/login"
-                render={(props) => <Login user={user} />}
-              />
+              </div>
+            }/>
+              </MainContainer>
             </Switch>
           </HashRouter>
         </div>
-      </Container>
     )
   }
 }

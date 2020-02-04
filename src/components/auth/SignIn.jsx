@@ -6,7 +6,7 @@ import logo from '../icons/dlogo2.png'
 const logger = new Logger('SignIn');
 
 
-export default class JSignIn extends Component {
+export default class SignIn extends Component {
   constructor(props) {
     super(props);
     this.signIn = this.signIn.bind(this);
@@ -81,7 +81,7 @@ export default class JSignIn extends Component {
           }}>
             <Image style={{
                 marginBottom: '10px'
-            }} src={logo} /> Sign In to your Account
+            }} src={logo} /> Sign in to your Account
           </Header>
           <Form size='large'>
             <Segment stacked>

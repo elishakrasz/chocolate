@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Auth, Logger } from 'aws-amplify';
-import { Container, Form, InputGroup, Button, Alert } from 'bootstrap-4-react';
+import { Container } from 'semantic-ui-react'
 
-import { Unexpected, Unauthorized } from '../components';
 import store, { updateProfile } from '../store';
+import { Login } from '.';
 
 const logger = new Logger('Profile');
 
@@ -80,29 +80,12 @@ export default class Profile extends Component {
   render() {
     const { user, profile, error } = this.state;
 
-    if (!user) { return <Unauthorized /> }
-    if (!user.id) { return <Unexpected /> }
+    if (!user) { return <Login /> }
 
     return (
-      <Container display="flex" flex="column" alignItems="center">
-        <InputGroup mb="3" style={{ maxWidth: '24rem' }}>
-          <InputGroup.PrependText>First name</InputGroup.PrependText>
-          <Form.Input
-            type="text"
-            defaultValue={profile.given_name}
-            onChange={event => this.handleInputChange('given_name', event.target.value)}
-          />
-        </InputGroup>
-        <InputGroup mb="3" style={{ maxWidth: '24rem' }}>
-          <InputGroup.PrependText>Last name</InputGroup.PrependText>
-          <Form.Input
-            type="text"
-            defaultValue={profile.family_name}
-            onChange={event => this.handleInputChange('family_name', event.target.value)}
-          />
-        </InputGroup>
-        <Button primary px="5" onClick={this.saveProfile}>Save</Button>
-        { error && <Alert warning>{error}</Alert> }
+      <Container>
+       
+       Profile
       </Container>
     )
   }

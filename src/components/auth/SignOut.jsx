@@ -19,7 +19,10 @@ export default class SignOut extends Component {
   render() {
     return (
       <Button
-        inverted
+      style={{
+        backgroundColor: 'rgb(0, 61, 121)',
+        color: 'white'
+      }}
         onClick={this.signOut}
       >
         Sign Out

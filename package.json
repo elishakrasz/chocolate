@@ -1,11 +1,14 @@
 {
-  "name": "journal",
+  "name": "client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "aws-amplify": "^1.1.1",
     "aws-amplify-react": "^2.0.2",
     "bootstrap-4-react": "0.0.54",
+    "faker": "^4.1.0",
+    "lodash": "^4.17.15",
+    "node-sass": "^4.13.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-router-dom": "^4.3.1",
@@ -19,6 +22,5 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  },
-  "homepage": "https://s3-us-west-1.amazonaws.com/journal-hosting-mobilehub-142591078"
+  }
 }

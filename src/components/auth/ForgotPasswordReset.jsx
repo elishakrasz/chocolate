@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
 import { Auth, Logger } from 'aws-amplify';
+import logo from '../icons/dlogo2.png'
 
 const logger = new Logger('ForgotPasswordReset');
 
@@ -53,9 +54,14 @@ export default class ForgotPasswordReset extends Component {
     return (
         <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
     <Grid.Column style={{ maxWidth: 450 }}>
-      <Header as='h2' color='teal' textAlign='center'>
-        <Image src='/logo.png' /> Log-in to your account
-      </Header>
+    <Header as='h1' textAlign='center' style={{
+              color: '#003D79',
+              marginTop: '15px'
+          }}>
+            <Image style={{
+                marginBottom: '10px'
+            }} src={logo} /> Password Reset
+          </Header>
       <Form size='large'>
         <Segment stacked>
           <Form.Input
